@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="悬浮翻译工具"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnEnableAccessibility"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开启无障碍权限"
+        android:marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnEnableOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="开启悬浮窗权限"
+        android:marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnStartService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="启动翻译服务"
+        android:marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnStopService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="停止翻译服务"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用说明：\n1. 开启无障碍和悬浮窗权限\n2. 启动翻译服务\n3. 打开需要翻译的应用\n4. 界面上的英文会自动被翻译成中文"
+        android:layout_marginTop="24dp"
+        android:textSize="14sp"
+        android:gravity="center"/>
+
+</LinearLayout>

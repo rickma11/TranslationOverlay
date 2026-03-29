@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">悬浮翻译工具</string>
+    <string name="accessibility_service_description">悬浮翻译服务，用于在应用界面上显示中文翻译</string>
+</resources>
