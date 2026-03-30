@@ -12,28 +12,28 @@
         android:text="悬浮翻译工具"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:marginBottom="24dp"/>
+        android:layout_marginBottom="24dp"/>
 
     <Button
         android:id="@+id/btnEnableAccessibility"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="开启无障碍权限"
-        android:marginBottom="12dp"/>
+        android:layout_marginBottom="12dp"/>
 
     <Button
         android:id="@+id/btnEnableOverlay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="开启悬浮窗权限"
-        android:marginBottom="12dp"/>
+        android:layout_marginBottom="12dp"/>
 
     <Button
         android:id="@+id/btnStartService"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="启动翻译服务"
-        android:marginBottom="12dp"/>
+        android:layout_marginBottom="12dp"/>
 
     <Button
         android:id="@+id/btnStopService"
