@@ -20,7 +20,7 @@
         </activity>
 
         <service
-            android:name=".TranslationAccessibilityService"
+            android:name="com.example.translationoverlay.TranslationAccessibilityService"
             android:exported="false"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
             <intent-filter>
