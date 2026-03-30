@@ -34,6 +34,13 @@ class TranslationAccessibilityService : AccessibilityService() {
             Log.d("Translation", "loadDictionary: 词典加载完成，词条数量: ${dictionary.size}")
         } catch (e: Exception) {
             Log.e("Translation", "loadDictionary: 加载词典失败: ${e.message}")
+            // 添加默认词条作为测试
+            dictionary["Hello"] = "你好"
+            dictionary["World"] = "世界"
+            dictionary["Open"] = "打开"
+            dictionary["Close"] = "关闭"
+            dictionary["Save"] = "保存"
+            Log.d("Translation", "loadDictionary: 添加默认词条，数量: ${dictionary.size}")
         }
     }
 
