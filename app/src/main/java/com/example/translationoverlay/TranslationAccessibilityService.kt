@@ -45,24 +45,26 @@ class TranslationAccessibilityService : AccessibilityService() {
     }
 
     override fun onAccessibilityEvent(event: AccessibilityEvent) {
-        Log.d("Translation", "onAccessibilityEvent: 接收到事件: ${event.eventType}")
+        Log.d("Translation", "onAccessibilityEvent: 事件类型: ${event.eventType}, 包名: ${event.packageName}")
         val rootNode = rootInActiveWindow ?: run {
             Log.d("Translation", "onAccessibilityEvent: 根节点为空")
             return
         }
-        Log.d("Translation", "onAccessibilityEvent: 开始处理节点")
+        Log.d("Translation", "onAccessibilityEvent: 根节点子数量: ${rootNode.childCount}")
         processNode(rootNode)
     }
 
     private fun processNode(node: AccessibilityNodeInfo) {
         if (node.text != null) {
             val text = node.text.toString()
-            Log.d("Translation", "processNode: 检测到文本: $text")
+            Log.d("Translation", "processNode: 检测到文本: '$text'")
             if (dictionary.containsKey(text)) {
                 val bounds = Rect()
                 node.getBoundsInScreen(bounds)
-                Log.d("Translation", "processNode: 找到翻译: $text -> ${dictionary[text]}")
+                Log.d("Translation", "processNode: 找到翻译: '$text' -> '${dictionary[text]}'")
                 overlayService.showTranslation(bounds, dictionary[text] ?: text)
+            } else {
+                Log.d("Translation", "processNode: 未找到翻译: '$text'")
             }
         }
 
